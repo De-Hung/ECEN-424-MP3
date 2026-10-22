@@ -22,13 +22,13 @@ public class Server {
 
         // Prompt user for str and N upon initialization
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Enter string (str): ");
+        System.out.print("Enter output string (str): ");
         str = scanner.nextLine();
 
-        System.out.print("Enter positive integer (N): ");
+        System.out.print("Enter positive integer for number of outputs (N): ");
         n = Integer.parseInt(scanner.nextLine().trim());
 
-        System.out.println("Starting server on port " + port + " with max " + maxClients + " concurrent clients...");
+        System.out.println("Server started. Port: " + port + " Max Concurrent Clients: " + maxClients);
 
         // Thread pool to handle up to maxClients simultaneously
         ExecutorService threadPool = Executors.newFixedThreadPool(maxClients);
